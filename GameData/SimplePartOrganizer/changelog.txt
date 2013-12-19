@@ -1,0 +1,22 @@
+Simple Part Organizer
+
+v1.0
+Felbourn here. The original mod was written by MrShifty. I am taking this over from him and calling what he did revision 1. The only change otherwise is to make this compatible with KSP 0.23 by fixing a null reference exception in the "Total Mass" sort routine.
+
+v0.250
+Fixes:
+- Made the mod filter window scrollable
+- Truncated text so it fits on the buttons
+- Internal changes to make more efficient code
+Additions:
+- Added Default button to the sort window
+- Filter settings now persistent between sessions
+
+v0.200
+- Added filter regime: part type
+- Added Select All and De-Select All buttons to the filter panels
+- Changed license to GPLv3
+
+v0.100 - Initial release.
+- 5 sorting regimes: title, manufacturer, size, dry mass, total mass
+- 2 filtering regimes: mod, size
