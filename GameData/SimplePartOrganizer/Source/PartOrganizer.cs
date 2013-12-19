@@ -494,6 +494,21 @@ namespace PartOrganizer
 
             if (GUI.Button(new Rect(10, 160, 130, 30), "Total Mass"))
             {
+                // 1.0 fixing null reference exception in KSP 0.23
+                AvailablePart kerbalEVA = null;
+                AvailablePart flag = null;
+                foreach (var part in partList)
+                {
+                    if (part.name == "kerbalEVA")
+                        kerbalEVA = part;
+                    else if (part.name == "flag")
+                        flag = part;
+                }
+                if (kerbalEVA != null)
+                    partList.Remove(kerbalEVA);
+                if (flag != null)
+                    partList.Remove(flag);
+                
                 partList.Sort((part1, part2) =>
                     (((int)(1000000 * ((part1.partPrefab.mass + part1.partPrefab.GetResourceMass()) 
                     - (part2.partPrefab.mass + part2.partPrefab.GetResourceMass()))))
