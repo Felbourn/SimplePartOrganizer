@@ -1,7 +1,29 @@
 Simple Part Organizer
+	Now by Bob Fitch, aka Felbourn
+	YouTube: https://www.youtube.com/user/BeazaYT
+	Twitter: @BlizzardFitch
+	Forums: http://forum.kerbalspaceprogram.com/threads/62466-0-23-SimplePartOrganizer-v1-0
+	Project Gateway: https://www.youtube.com/playlist?list=PLF4E798BCCBC36923
+	Project Odyssey (sequel to Project Gateway): https://www.youtube.com/playlist?list=PLBhKowDYZ8216b1_ghbeQBodTf9SrmsNc
+
+v1.2.1
+- fixed incompatibility problem with some B9 parts
+- renamed the "to hide" filters to just say "filter"
+
+v1.2.0
+- recompiled it against 0.23.5 update
+- getting "module name" from the part instead of turning it into a string
+
+v1.1.0
+- Part info is saved so sorting is faster
+- Selected sorting method is indicated its button
+- Windows are bigger
+- Scroll bar on mods AND modules now
+- Modules is a Work-In-Progress filter that's based on what modules a part contains
+- Size sorting is simpler now, showing only the min and max attachment sizes
 
 v1.0
-Felbourn here. The original mod was written by MrShifty. I am taking this over from him and calling what he did revision 1. The only change otherwise is to make this compatible with KSP 0.23 by fixing a null reference exception in the "Total Mass" sort routine.
+The original mod was written by MrShifty. I am taking this over from him and calling what he did revision 1. The only change otherwise is to make this compatible with KSP 0.23 by fixing a null reference exception in the "Total Mass" sort routine.
 
 v0.250
 Fixes:
