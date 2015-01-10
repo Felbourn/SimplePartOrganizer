@@ -186,7 +186,7 @@ namespace PartOrganizer
                 GUI.skin = HighLogic.Skin;
          
             // we only want the sort & filter buttons if the parts panel is showing
-            if (EditorLogic.fetch.editorScreen != EditorLogic.EditorScreen.Parts)
+            if (EditorLogic.fetch.editorScreen != EditorScreen.Parts)
                 return;
 
             if (GUI.Button(new Rect(EditorPanels.Instance.partsPanelWidth + 20, Screen.height - 20, 60, 20), "Sort"))
@@ -492,9 +492,9 @@ namespace PartOrganizer
         //-------------------------------------------------------------------------------------------------------------------------------------------
         void DefineFilters()
         {
-            EditorPartList.Instance.ExcludeFilters.AddFilter(new EditorPartListFilter("Mod Filter", (part => !PartInFilteredButtons(part, modButtons, modHash))));
-            EditorPartList.Instance.ExcludeFilters.AddFilter(new EditorPartListFilter("Size Filter", (part => !PartInFilteredButtons(part, sizeButtons, sizeHash))));
-            EditorPartList.Instance.ExcludeFilters.AddFilter(new EditorPartListFilter("Modules Filter", (part => !PartInFilteredButtons(part, moduleButtons, moduleHash))));
+            EditorPartList.Instance.ExcludeFilters.AddFilter(new EditorPartListFilter<AvailablePart>("Mod Filter", (part => !PartInFilteredButtons(part, modButtons, modHash))));
+            EditorPartList.Instance.ExcludeFilters.AddFilter(new EditorPartListFilter<AvailablePart>("Size Filter", (part => !PartInFilteredButtons(part, sizeButtons, sizeHash))));
+            EditorPartList.Instance.ExcludeFilters.AddFilter(new EditorPartListFilter<AvailablePart>("Modules Filter", (part => !PartInFilteredButtons(part, moduleButtons, moduleHash))));
             EditorPartList.Instance.Refresh();
         }
 
